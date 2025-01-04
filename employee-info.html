@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Info</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Information</h1>
+        <div id="employee-info">
+            <p><strong>Name:</strong> <span id="employee-name"></span></p>
+            <p><strong>Position:</strong> <span id="employee-position"></span></p>
+        </div>
+        <button onclick="goBack()">Back to Dashboard</button>
+    </div>
+
+    <script>
+        // Example JavaScript to fetch employee data
+        document.addEventListener("DOMContentLoaded", function() {
+            const employeeId = 1; // Replace with dynamic employee ID
+            fetch(`/employee-info/${employeeId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("employee-name").textContent = data.name;
+                    document.getElementById("employee-position").textContent = data.position;
+                })
+                .catch(error => console.error('Error fetching employee data:', error));
+        });
+
+        function goBack() {
+            window.location.href = "/dashboard";
+        }
+    </script>
+</body>
+</html>

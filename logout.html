@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Logged Out</h1>
+        <p>You have been successfully logged out.</p>
+        <a href="/login">Click here to log in again</a>
+    </div>
+
+    <script>
+        // Example JavaScript to handle logout process
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('/log-out', { method: 'POST' })
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                })
+                .catch(error => console.error('Error during logout:', error));
+        });
+    </script>
+</body>
+</html>

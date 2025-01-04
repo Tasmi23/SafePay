@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS payroll;
+
+USE payroll;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    address TEXT NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL
+);

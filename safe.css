@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("home.jpg");
+}
+
+header {
+  background-color: #b691e6;
+  color: rgb(45, 6, 70);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: rgb(25, 2, 54);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+  font-size: 110%;
+  background-color: #d0bdff4e;
+}
+
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.032);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #09026c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+#employeeInfo div {
+  background: white;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: left;
+}
+
+#employeeInfo div h3 {
+  margin-top: 0;
+}
